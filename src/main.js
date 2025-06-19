@@ -1,10 +1,10 @@
-import { UserProfile } from "../Components/UserProfile.js";
-import { TaskCard } from "../Components/TaskCard.js";
-import { TaskList } from "../Components/TaskList.js";
+import { TaskCard } from "./components/TaskCard.js";
+import { TaskList } from "./components/TaskList.js";
+import { UserProfile } from "./components/UserProfile.js";
 
-import { fetchProfile } from "../Service/Profile.js";
-import { Store } from "../Service/Store.js";
-import { fetchTasks } from "../Service/Tasks.js";
+import { fetchProfile } from "./service/Profile.js";
+import { Store } from "./service/Store.js";
+import { fetchTasks } from "./service/Tasks.js";
 
 async function init() {
   window.app.store = Store;
