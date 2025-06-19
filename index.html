@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    main {
+      max-width: 640px;
+      position: relative;
+      margin: 0 auto;
+      padding-block: 16px;
+    }
+
+    form {
+      padding-block: 16px;
+    }
+
+    form input[type="submit"] {
+      padding: 8px 10px;
+    }
+  </style>
+  <body>
+    <main>
+      <user-profile></user-profile>
+      <form>
+        <input type="submit" value="Save Changes" />
+        <task-list></task-list>
+      </form>
+    </main>
+
+    <template id="user-profile-template">
+      <div id="profile">
+        <img width="80px" />
+        <h2>User name</h2>
+      </div>
+    </template>
+
+    <template id="task-list-template">
+      <ul class="task-list"></ul>
+    </template>
+
+    <template id="task-card-template">
+      <li class="task">
+        <div class="task__header">
+          <input type="date" name="task-due" />
+
+          <div>
+            <button id="done">
+              <input type="checkbox" />
+              <span> Done </span>
+            </button>
+            <button id="remove">Remove</button>
+          </div>
+        </div>
+
+        <div class="task__description">
+          <p></p>
+        </div>
+      </li>
+    </template>
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
